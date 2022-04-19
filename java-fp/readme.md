@@ -1,4 +1,4 @@
-#Functional Programming Basics
+# Functional Programming Basics
 Functional programming contains the following key concepts:
 * Functions as first class objects
 * Pure functions
@@ -14,12 +14,12 @@ These concepts and rules will be explained throughout the rest of this tutorial
 
 Even if you do not follow all of these rules all the time, you can still benefit from the functional programming ideas in your applications. As you will see, functional programming is not the right tool for every problem out there. Especially the idea of "no side effects" makes it hard to e.g. write to a database (that is a side effect). You need to learn what problems functional programming is good at solving, and which it is not.
 
-##Functions as First Class Objects
+## Functions as First Class Objects
 In the functional programming paradigm, functions are first class objects in the language. That means that you can create an "instance" of a function, as have a variable reference that function instance, just like a reference to a String, Map or any other object. Functions can also be passed as parameters to other functions.
 
 In Java, methods are not first class objects. The closest we get is Java Lambda Expressions. 
 
-##Pure Functions
+## Pure Functions
 A function is a pure function if:
 
 The execution of the function has no side effects.
@@ -49,7 +49,7 @@ private int value = 0;
 ```
 Notice how the method add() uses a member variable to calculate its return value, and it also modifies the state of the value member variable, so it has a side effect.
 
-##Higher Order Functions
+## Higher Order Functions
 A function is a higher order function if at least one of the following conditions are met:
 
 * The function takes one or more functions as parameters.
@@ -94,7 +94,7 @@ As you can see, all of these interfaces are functional interfaces. Therefore the
 
 Higher order functions are also covered with different examples in the text about Higher Order Functions
 
-##No State
+## No State
 As mentioned in the beginning of this tutorial, a rule of the functional programming paradigm is to have no state. By "no state" is typically meant no state external to the function. A function may have local variables containing temporary state internally, but the function cannot reference any member variables of the class or object the function belongs to.
 
 Here is an example of a function that uses no external state:
@@ -118,20 +118,20 @@ return initVal + a;
 ```
 This function clearly violates the no state rule.
 
-##No Side Effects
+## No Side Effects
 Another rule in the functional programming paradigm is that of no side effects. This means, that a function cannot change any state outside of the function. Changing state outside of a function is referred to as a side effect.
 
 State outside of a function refers both to member variables in the class or object the function, and member variables inside parameters to the functions, or state in external systems like file systems or databases.
 
-##Immutable Variables
+## Immutable Variables
 A third rule in the functional programming paradigm is that of immutable variables. Immutable variables makes it easier to avoid side effects.
 
-##Favour Recursion Over Looping
+## Favour Recursion Over Looping
 A fourth rule in the functional programming paradigm is to favour recursion over looping. Recursion uses function calls to achieve looping, so the code becomes more functional.
 
 Another alternative to loops is the Java Streams API. This API is functionally inspired.
 
-##Functional Interfaces
+## Functional Interfaces
 A functional interface in Java is an interface that only has one abstract method. By an abstract method is meant only one method which is not implemented. An interface can have multiple methods, e.g. default methods and static methods, both with implementations, but as long as the interface only has one method that is not implemented, the interface is considered a functional interface.
 
 Here is an example of a functional interface:
